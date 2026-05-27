@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: impds-aadhaar-api
+    runtime: python
+    repo: https://github.com/hexabhicomeback/Deepseek-final-try-impds
+    plan: free
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --bind 0.0.0.0:3000
